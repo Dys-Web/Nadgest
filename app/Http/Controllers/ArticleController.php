@@ -68,15 +68,6 @@ class ArticleController extends Controller
     $article->user_id = Auth::id();
     // Sauvegarder l'article dans la base de données
     $article->save();
-    // Sauvegarde en base de données
-    // Article::create([
-    //     "title" => $request->title,
-    //     "description" => $request->description,
-    //     "context" => $request->context,
-    //     "instruction" => $request->instruction,
-    //     "image" => $image,
-    //     "user_id" => $request->user_id
-    // ]);
 
     // Rediriger avec un message de succès
     return redirect()->route('articles.index')->with('success', 'Article ajouté avec succès.');
